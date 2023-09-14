@@ -1,7 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
+  const [text, setText] = useState({});
+
+  useEffect(() => {
+    fetch("/data/data.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setText(data);
+      })
+      .catch((error) => {
+        console.error("An error occurs when loading content:", error);
+      });
+  }, []);
+
   useEffect(() => {
     function addHighlight(range) {
       const span = document.createElement("span");
@@ -26,58 +39,27 @@ function App() {
       }
     };
 
-    document
-      .querySelector(".column-right p")
-      .addEventListener("mouseup", handleMouseUp);
-    document
-      .querySelector(".column-right p")
-      .addEventListener("click", handleClick);
+    const columnRight = document.querySelector(".column-right");
+
+    columnRight.addEventListener("mouseup", handleMouseUp);
+    columnRight.addEventListener("click", handleClick);
 
     return () => {
-      document
-        .querySelector(".column-right p")
-        .removeEventListener("mouseup", handleMouseUp);
-      document
-        .querySelector(".column-right p")
-        .removeEventListener("click", handleClick);
+      columnRight.removeEventListener("mouseup", handleMouseUp);
+      columnRight.removeEventListener("click", handleClick);
     };
   }, []);
 
   return (
     <div className="App">
-      <h1>In a galaxy far, far away....</h1>
+      <h1>{text.textTitle}</h1>
       <table>
         <tr>
           <td className="column-left">
-            <p>
-              Star Wars is a renowned science fiction franchise created by
-              George Lucas, set in a distant galaxy where the eternal battle
-              between the Sith and Jedi unfolds. The saga, which began in 1977
-              with the original film, revolves around iconic characters like
-              Luke Skywalker, Princess Leia, and Darth Vader, exploring themes
-              of heroism, redemption, and the struggle between good and evil.
-              Spanning multiple trilogies, standalone movies, TV series, books,
-              and more, Star Wars has left an indelible mark on popular culture,
-              captivating fans worldwide with its epic storytelling and rich
-              universe.
-            </p>
+            <p>{text.textNormal}</p>
           </td>
           <td className="column-right">
-            <p>
-              <span className="highlight">Star Wars</span> is a renowned science
-              fiction franchise created by George Lucas, set in a distant galaxy
-              where the eternal battle between the Sith and Jedi unfolds. The
-              saga, which began in 1977 with the original film, revolves around
-              iconic characters like
-              <span className="highlight">Luke Skywalker</span>,
-              <span className="highlight">Princess Leia</span>, and
-              <span className="highlight">Darth Vader</span>, exploring themes
-              of heroism, redemption, and the struggle between good and evil.
-              Spanning multiple trilogies, standalone movies, TV series, books,
-              and more, <span className="highlight">Star Wars</span> has left an
-              indelible mark on popular culture, captivating fans worldwide with
-              its epic storytelling and rich universe.
-            </p>
+            <p dangerouslySetInnerHTML={{ __html: text.textMarked }}></p>
           </td>
         </tr>
       </table>
