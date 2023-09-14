@@ -1,6 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 
+function removeHighlights(textWithHighlights) {
+  const div = document.createElement("div");
+  div.innerHTML = textWithHighlights;
+  const highlights = div.querySelectorAll(".highlight");
+  highlights.forEach((highlight) => {
+    const textNode = document.createTextNode(highlight.textContent);
+    highlight.parentNode.replaceChild(textNode, highlight);
+  });
+  return div.innerHTML;
+}
+
 function App() {
   const [text, setText] = useState({});
 
@@ -56,7 +67,7 @@ function App() {
       <table>
         <tr>
           <td className="column-left">
-            <p>{text.textNormal}</p>
+            <p>{removeHighlights(text.textMarked)}</p>
           </td>
           <td className="column-right">
             <p dangerouslySetInnerHTML={{ __html: text.textMarked }}></p>
