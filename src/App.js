@@ -70,14 +70,16 @@ function App() {
     <div className="App">
       <h1>{text.textTitle}</h1>
       <table>
-        <tr>
-          <td className="column-left">
-            <p>{removeHighlights(text.textMarked)}</p>
-          </td>
-          <td className="column-right">
-            <p dangerouslySetInnerHTML={{ __html: text.textMarked }}></p>
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td className="column-left">
+              <p>{removeHighlights(text.textMarked)}</p>
+            </td>
+            <td className="column-right">
+              <p dangerouslySetInnerHTML={{ __html: text.textMarked }}></p>
+            </td>
+          </tr>
+        </tbody>
       </table>
     </div>
   );
