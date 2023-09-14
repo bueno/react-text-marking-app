@@ -27,12 +27,17 @@ function App() {
   }, []);
 
   useEffect(() => {
-    function addHighlight(range) {
+    const addHighlight = (range) => {
       const span = document.createElement("span");
       span.className = "highlight";
-      span.textContent = range.toString();
-      range.surroundContents(span);
-    }
+
+      // Check if the range is valid and contains nodes
+      if (range && range.cloneContents().textContent.trim() !== "") {
+        span.textContent = range.toString();
+        range.deleteContents();
+        range.insertNode(span);
+      }
+    };
 
     const handleMouseUp = () => {
       const selection = window.getSelection();
