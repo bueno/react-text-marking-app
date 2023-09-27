@@ -1,4 +1,5 @@
 import React from "react";
+import { HighlightedText } from "./HighlightedText";
 
 function LeftColumn({ text }) {
   return (
@@ -11,10 +12,9 @@ function LeftColumn({ text }) {
 function RightColumn({ text }) {
   return (
     <div className="column-right p-4">
-      <p
-        className="text-gray-500 text-lg"
-        dangerouslySetInnerHTML={{ __html: text }}
-      ></p>
+      <p className="text-gray-500 text-lg">
+        <HighlightedText text={text} />
+      </p>
     </div>
   );
 }
