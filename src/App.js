@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import { LeftColumn, RightColumn } from "./components/ColumnComponent"; 
+
 
 function removeHighlights(textWithHighlights) {
 	const div = document.createElement("div");
@@ -66,26 +68,17 @@ function App() {
 		};
 	}, []);
 
-	return (
-		<div className="container mx-auto font-sans bg-gray-200 rounded-xl shadow border p-8 m-10">
-			<h1 className="text-center text-3xl text-gray-700 font-bold p-4 mb-5">
-				{text.textTitle}!
-			</h1>
-			<div className="flex flex-col md:flex-row">
-				<div className="column-left p-4">
-					<p className="text-gray-500 text-lg">
-						{removeHighlights(text.textMarked)}
-					</p>
-				</div>
-				<div className="column-right p-4">
-					<p
-						className="text-gray-500 text-lg"
-						dangerouslySetInnerHTML={{ __html: text.textMarked }}
-					></p>
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <div className="container mx-auto font-sans bg-gray-200 rounded-xl shadow border p-8 m-10">
+      <h1 className="text-center text-3xl text-gray-700 font-bold p-4 mb-5">
+        {text.textTitle}!
+      </h1>
+      <div className="flex flex-col md:flex-row">
+        <LeftColumn text={removeHighlights(text.textMarked)} />
+        <RightColumn text={text.textMarked} />
+      </div>
+    </div>
+  );
 }
 
 export default App;
