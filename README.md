@@ -2,9 +2,13 @@
 
 This project is a React application designed to showcase a text highlighting feature. Users can interact with the text content, selecting portions of text to highlight, and even remove the highlights with a click. The implementation includes touch support for mobile devices, allowing users to highlight text seamlessly across various platforms.
 
-The base project was created using [create-react-app](https://create-react-app.dev/).
+The base project was created using [create-react-app](https://create-react-app.dev/){:target="\_blank"}.
 
-## Key Features
+## ✨ Show your support
+
+Give a ⭐️ if these projects helped you!
+
+## 🚀 Key Features
 
 - Text highlighting using spans.
 - Seamless removal of highlights.
@@ -13,7 +17,7 @@ The base project was created using [create-react-app](https://create-react-app.d
 
 Feel free to explore the code and integrate this text highlighting functionality into your own React projects!
 
-## Technologies and Packages Utilized
+## 👾 Technologies and Packages Utilized
 
 The React Text Highlighter App utilizes the following technologies and packages:
 
@@ -22,7 +26,7 @@ The React Text Highlighter App utilizes the following technologies and packages:
 - **Node.js:** A JavaScript runtime used for building server-side applications.
 - **npm (Node Package Manager):** Used for managing project dependencies.
 
-## Installation Guide
+## 📚 Installation Guide
 
 ## Prerequisites
 
