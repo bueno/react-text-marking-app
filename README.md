@@ -1,71 +1,102 @@
-# React Text Marking App (POC)
-# Getting Started with Create React App
+# Project Overview: React Text Highlighter App (PoC)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React application designed to showcase a text highlighting feature. Users can interact with the text content, selecting portions of text to highlight, and even remove the highlights with a click. The implementation includes touch support for mobile devices, allowing users to highlight text seamlessly across various platforms.
+
+The base project was created using [create-react-app](https://create-react-app.dev/).
+
+## Key Features
+
+- Text highlighting using spans.
+- Seamless removal of highlights.
+- Mobile-friendly touch support.
+- Clean and organized React component structure.
+
+Feel free to explore the code and integrate this text highlighting functionality into your own React projects!
+
+## Technologies and Packages Utilized
+
+The React Text Highlighter App utilizes the following technologies and packages:
+
+- **React.js:** A JavaScript library for building user interfaces.
+- **Tailwind CSS:** A utility-first CSS framework used for styling.
+- **Node.js:** A JavaScript runtime used for building server-side applications.
+- **npm (Node Package Manager):** Used for managing project dependencies.
+
+## Installation Guide
+
+## Prerequisites
+
+1. **Node.js and npm**: Ensure that Node.js and npm are installed on your machine. You can download them from [Node.js website](https://nodejs.org/).
+
+## Installation Steps
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/bueno/react-text-marking-app.git
+   ```
+
+2. **Navigate to the Project Directory:**
+
+   ```bash
+   cd react-text-marking-app
+   ```
+
+3. **Install Dependencies:**
+
+   ```bash
+   npm install
+   ```
 
 ## Available Scripts
 
-In the project directory, you can run:
+**In the project directory, you can use the scripts below:**
 
-### `npm start`
+1. **Running the project**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   ```bash
+   npm start
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   It runs the app in the development mode.\
+   Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### `npm test`
+   The page will reload when you make changes.\
+   You may also see any lint errors in the console.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Launching the test runner**
 
-### `npm run build`
+   ```bash
+   npm test
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   Launches the test runner in the interactive watch mode.\
+    See in the **create-react-app** the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Building the app for production**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm run build
+   ```
 
-### `npm run eject`
+   Builds the app for production to the `build` folder.\
+    It correctly bundles React in production mode and optimizes the build for the best performance.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   The build is minified and the filenames include the hashes.\
+    Your app is ready to be deployed!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   See in the **create-react-app** the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Removing the single build dependency from your project**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm run eject
+   ```
 
-## Learn More
+   **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
