@@ -6,7 +6,7 @@ The base project was created using [create-react-app](https://create-react-app.d
 
 ## ✨ Show your support
 
-Give a ⭐️ if these projects helped you!
+Give a ⭐️ if this project helped you!
 
 ## 🚀 Key Features
 
